@@ -6,16 +6,24 @@
 //  Copyright © 2019 Andrian Sergheev. All rights reserved.
 //
 
-import UIKit
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
+	private lazy var applicationCoordinator: Coordinator = self.makeCoordinator()
+
+	var rootController: UINavigationController {
+		return self.window?.rootViewController as! UINavigationController
+	}
+
+	private func makeCoordinator() -> Coordinator {
+		return ApplicationCoordinator(coordinatorFactory: CoordinatorFactoryImp(),
+									  router: RouterImp(rootController: self.rootController))
+	}
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+		applicationCoordinator.start()
 		return true
 	}
 
@@ -41,6 +49,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
 
-
 }
-

@@ -1,28 +1,16 @@
 PODS:
-  - Coordinator (6.2)
   - SwiftLint (0.29.2)
 
 DEPENDENCIES:
-  - Coordinator (from `https://github.com/radianttap/Coordinator.git`)
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - SwiftLint
 
-EXTERNAL SOURCES:
-  Coordinator:
-    :git: https://github.com/radianttap/Coordinator.git
-
-CHECKOUT OPTIONS:
-  Coordinator:
-    :commit: b29da4b7bfd7568fb02d07a1aa1fb06cb95ae1fb
-    :git: https://github.com/radianttap/Coordinator.git
-
 SPEC CHECKSUMS:
-  Coordinator: 0fff6df7ac1e96ca60cc129558d35278eb6f1dea
   SwiftLint: 47df60bdea6e7e902b193b6596db8683aafd86a3
 
-PODFILE CHECKSUM: 96155ecb8f3fc742b2e03c3409a66dbe5c4fd24a
+PODFILE CHECKSUM: bf738efc08745ac05b7cf282915f05e9cd3d8fe5
 
 COCOAPODS: 1.5.3
