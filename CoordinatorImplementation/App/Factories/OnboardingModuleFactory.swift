@@ -8,4 +8,5 @@
 
 protocol OnboardingModuleFactory {
 	func makeOnboardingModule() -> OnBoardingView
+	func makeOnboardingStepsModule() -> PageViewController
 }

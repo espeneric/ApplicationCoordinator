@@ -8,25 +8,34 @@
 
 class OnboardingCoordinator: BaseCoordinator, OnboardingCoordinatorOutput {
 
+	var onFinishSteps: (() -> Void)?
 	var finishFlow: (() -> Void)?
 
 	private let factory: OnboardingModuleFactory
 	private let router: Router
 
-	init(witch factory: OnboardingModuleFactory, router: Router) {
+	init(with factory: OnboardingModuleFactory, router: Router) {
 		self.factory = factory
 		self.router = router
 	}
 
 	override func start() {
-		showOnboarding()
+		showTutorial()
 	}
 
-	func showOnboarding() {
-		let onboardingModule = factory.makeOnboardingModule()
-		onboardingModule.onFinish = { [weak self] in
+	private func showTutorial() {
+		let pageModule = factory.makeOnboardingStepsModule()
+		pageModule.onFinishSteps = { [weak self] in
+			self?.showFinalPage()
+		}
+		router.setRootModule(pageModule.toPresent())
+	}
+
+	private func showFinalPage() {
+		let finalPage = factory.makeOnboardingModule()
+		finalPage.onFinish = { [ weak self] in
 			self?.finishFlow?()
 		}
-		router.setRootModule(onboardingModule.toPresent())
+		router.setRootModule(finalPage.toPresent())
 	}
 }

@@ -13,6 +13,6 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
 //	}
 
 	func makeOnboardingCoordinator(router: Router) -> Coordinator & OnboardingCoordinatorOutput {
-		return OnboardingCoordinator(witch: ModuleFactoryImp(), router: router)
+		return OnboardingCoordinator(with: ModuleFactoryImp(), router: router)
 	}
 }

@@ -13,4 +13,8 @@ OnboardingModuleFactory {
 		return OnBoardingController.controllerFromStoryboard(.onboarding)
 	}
 
+	func makeOnboardingStepsModule() -> PageViewController {
+		return PageViewController.controllerFromStoryboard(.onboarding)
+	}
+
 }
