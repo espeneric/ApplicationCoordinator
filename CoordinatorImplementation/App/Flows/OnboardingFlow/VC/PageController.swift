@@ -13,14 +13,16 @@ OnFinishStepsView {
 
 	var onFinishSteps: (() -> Void)?
 
-	var pages = [UIViewController]()
-	let pageControl = UIPageControl()
+	private var pages = [UIViewController]()
+	private let pageControl = UIPageControl()
 
 	override func viewDidLoad() {
 		self.dataSource = self
 		self.delegate = self
 		let initialPage = 0
 
+		self.view.backgroundColor = UIColor.white
+		
 		let page1 = Page1ViewController()
 		let page2 = Page2ViewController()
 		let page3 = Page3ViewController()

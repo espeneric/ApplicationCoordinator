@@ -9,13 +9,15 @@
 class Page2ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.view.backgroundColor = UIColor.blue
+		self.view.backgroundColor = UIColor.gray
 		// label
 		let labelInst = UILabel()
 		self.view.addSubview(labelInst)
+		labelInst.textColor = UIColor.white
 		labelInst.text = "Page 2"
 		labelInst.translatesAutoresizingMaskIntoConstraints = false
 		labelInst.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 80).isActive = true
 		labelInst.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20).isActive = true
+
 	}
 }
