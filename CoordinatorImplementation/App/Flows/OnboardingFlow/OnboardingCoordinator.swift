@@ -28,7 +28,7 @@ class OnboardingCoordinator: BaseCoordinator, OnboardingCoordinatorOutput {
 		pageModule.onFinishSteps = { [weak self] in
 			self?.showFinalPage()
 		}
-		router.setRootModule(pageModule.toPresent())
+		router.setRootModule(pageModule.toPresent(), hideBar: true)
 	}
 
 	private func showFinalPage() {
