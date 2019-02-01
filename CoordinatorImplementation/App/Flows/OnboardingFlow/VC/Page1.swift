@@ -6,7 +6,7 @@
 //  Copyright © 2019 Andrian Sergheev. All rights reserved.
 //
 
-class Page1ViewController: UIViewController {
+final class Page1ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.view.backgroundColor = UIColor.gray

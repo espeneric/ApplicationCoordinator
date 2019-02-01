@@ -6,9 +6,6 @@
 //  Copyright © 2019 Andrian Sergheev. All rights reserved.
 //
 
-protocol OnBoardingView: BaseView {
+protocol OnboardingView: BaseView {
 	var onFinish: (() -> Void)? { get set }
-}
-protocol OnFinishStepsView: BaseView {
-	var onFinishSteps: (() -> Void)? { get set }
 }

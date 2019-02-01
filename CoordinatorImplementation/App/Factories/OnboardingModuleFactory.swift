@@ -7,6 +7,6 @@
 //
 
 protocol OnboardingModuleFactory {
-	func makeOnboardingModule() -> OnBoardingView
-	func makeOnboardingStepsModule() -> PageViewController
+	func makeOnboardingModule() -> OnboardingView
+	func makeOnboardingStepsModule() -> StepsView
 }

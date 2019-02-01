@@ -8,11 +8,12 @@
 
 final class CoordinatorFactoryImp: CoordinatorFactory {
 
-//	func makeTabBarCoordinator() -> (configurator: Coordinator, toPresent: UIPresentable?) {
-//		//TODO:
-//	}
-
 	func makeOnboardingCoordinator(router: Router) -> Coordinator & OnboardingCoordinatorOutput {
 		return OnboardingCoordinator(with: ModuleFactoryImp(), router: router)
 	}
+	
+	func makeAuthCoordinator(router: Router) -> AuthCoordinatorOutput & Coordinator {
+		return AuthCoordinator(with: ModuleFactoryImp(), router: router)
+	}
+	
 }

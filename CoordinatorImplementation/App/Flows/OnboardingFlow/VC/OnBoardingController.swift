@@ -6,7 +6,7 @@
 //  Copyright © 2019 Andrian Sergheev. All rights reserved.
 //
 
-class OnBoardingController: UIViewController, OnBoardingView {
+final class OnBoardingController: UIViewController, OnboardingView {
 
 	var onFinish: (() -> Void)?
 

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Andrian Sergheev. All rights reserved.
 //
 
-class Page3ViewController: UIViewController {
+final class Page3ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.view.backgroundColor = UIColor.gray

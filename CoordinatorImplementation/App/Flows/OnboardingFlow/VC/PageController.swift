@@ -6,10 +6,10 @@
 //  Copyright © 2019 Andrian Sergheev. All rights reserved.
 //
 
-class PageViewController: UIPageViewController,
+final class PageViewController: UIPageViewController,
 	UIPageViewControllerDataSource,
 	UIPageViewControllerDelegate,
-OnFinishStepsView {
+StepsView {
 
 	var onFinishSteps: (() -> Void)?
 
