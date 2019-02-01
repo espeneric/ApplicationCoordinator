@@ -7,6 +7,5 @@
 //
 
 protocol OnboardingCoordinatorOutput: class {
-	var onFinishSteps: (() -> Void)? { get set }
 	var finishFlow: (() -> Void)? { get set }
 }

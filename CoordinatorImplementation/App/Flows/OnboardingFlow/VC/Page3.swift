@@ -9,9 +9,8 @@
 class Page3ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// label
 		self.view.backgroundColor = UIColor.gray
-		
+		// label
 		let labelInst = UILabel()
 		self.view.addSubview(labelInst)
 		labelInst.textColor = UIColor.white

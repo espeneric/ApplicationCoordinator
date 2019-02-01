@@ -13,7 +13,6 @@ class Page1ViewController: UIViewController {
 		// label
 		let labelInst = UILabel()
 		self.view.addSubview(labelInst)
-
 		labelInst.textColor = UIColor.white
 		labelInst.text = "Page 1"
 		labelInst.translatesAutoresizingMaskIntoConstraints = false
