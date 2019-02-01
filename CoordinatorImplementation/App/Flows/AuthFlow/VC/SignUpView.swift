@@ -7,6 +7,6 @@
 //
 
 protocol SignUpView: BaseView {
-	var onSignUpComplete: (()->Void)? { get set }
-	var onTermsTap: (()->Void)? { get set }
+	var onSignUpComplete: (() -> Void)? { get set }
+	var onTermsTap: (() -> Void)? { get set }
 }

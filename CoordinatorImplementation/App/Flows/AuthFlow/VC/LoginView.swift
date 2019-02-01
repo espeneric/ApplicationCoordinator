@@ -7,8 +7,6 @@
 //
 
 protocol LoginView: BaseView {
-	var onLoginTap: (()->Void)? { get set }
-	var onSignUpTap: (()->Void)? { get set }
+	var onLoginTap: (() -> Void)? { get set }
+	var onSignUpTap: (() -> Void)? { get set }
 }
-
-

@@ -11,4 +11,3 @@ protocol AuthModuleFactory {
 	func makeSignUpModule() -> SignUpView
 	func makeTermsModule() -> TermsView
 }
-

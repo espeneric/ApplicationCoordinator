@@ -6,14 +6,12 @@
 //  Copyright © 2019 Andrian Sergheev. All rights reserved.
 //
 
-
 class AuthCoordinator: BaseCoordinator, AuthCoordinatorOutput {
 
 	var finishFlow: (() -> Void)?
 
 	private let factory: AuthModuleFactory
 	private let router: Router
-
 
 	init(with factory: AuthModuleFactory, router: Router) {
 		self.factory = factory
@@ -30,7 +28,7 @@ class AuthCoordinator: BaseCoordinator, AuthCoordinatorOutput {
 			self?.finishFlow?()
 		}
 		loginOutput.onSignUpTap = { [weak self] in
-			self?.showLogin()
+			self?.showSignUp()
 		}
 		router.setRootModule(loginOutput)
 	}

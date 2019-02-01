@@ -8,11 +8,8 @@
 
 final class SignUpViewController: UIViewController, SignUpView {
 
-
 	var onSignUpComplete: (() -> Void)?
 	var onTermsTap: (() -> Void)?
-
-
 
 	@IBOutlet weak var termsConditionsLabel: UILabel!
 	override func viewDidLoad() {
@@ -21,14 +18,12 @@ final class SignUpViewController: UIViewController, SignUpView {
 		// Do any additional setup after loading the view.
 	}
 
-
-	
 	@IBAction func signUpTapped(_ sender: Any) {
-
+		self.onSignUpComplete?()
 	}
 
 	@IBAction func termsConditionsTapped(_ sender: Any) {
-
+		self.onTermsTap?()
 	}
 
 }

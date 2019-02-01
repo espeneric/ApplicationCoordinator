@@ -22,7 +22,7 @@ StepsView {
 		let initialPage = 0
 
 		self.view.backgroundColor = UIColor.white
-		
+
 		let page1 = Page1ViewController()
 		let page2 = Page2ViewController()
 		let page3 = Page3ViewController()

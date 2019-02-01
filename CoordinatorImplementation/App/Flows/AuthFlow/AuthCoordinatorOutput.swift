@@ -7,5 +7,5 @@
 //
 
 protocol AuthCoordinatorOutput: class {
-	var finishFlow: (()->Void)? { get set }
+	var finishFlow: (() -> Void)? { get set }
 }

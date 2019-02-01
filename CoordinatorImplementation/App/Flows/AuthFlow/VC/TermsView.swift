@@ -7,6 +7,5 @@
 //
 
 protocol TermsView: BaseView {
-	var onTermsSwitchTap: (()->Void)? { get set }
+	var onTermsSwitchTap: (() -> Void)? { get set }
 }
-

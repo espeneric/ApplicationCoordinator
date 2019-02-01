@@ -9,4 +9,3 @@
 protocol StepsView: BaseView {
 	var onFinishSteps: (() -> Void)? { get set }
 }
-

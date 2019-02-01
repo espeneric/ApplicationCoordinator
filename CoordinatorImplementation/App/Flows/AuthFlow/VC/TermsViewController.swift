@@ -14,10 +14,8 @@ final class TermsViewController: UIViewController, TermsView {
         // Do any additional setup after loading the view.
     }
 
-	
 	@IBAction func termsConditionsSwitch(_ sender: Any) {
-
+		self.onTermsSwitchTap?()
 	}
-	
-	
+
 }

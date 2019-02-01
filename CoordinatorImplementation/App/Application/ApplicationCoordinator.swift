@@ -6,15 +6,14 @@
 //  Copyright © 2019 Andrian Sergheev. All rights reserved.
 //
 
-fileprivate var onboardingWasShown: Bool = false
-fileprivate var isAuthorized:Bool = false
+private var onboardingWasShown: Bool = false
+private var isAuthorized: Bool = false
 
-
-fileprivate enum LaunchInstructor {
+private enum LaunchInstructor {
 	case auth, onboarding
 
-	static func configure(tutorialWasShown:Bool = onboardingWasShown,
-						  isAuthorized:Bool = isAuthorized) -> LaunchInstructor{
+	static func configure(tutorialWasShown: Bool = onboardingWasShown,
+						  isAuthorized: Bool = isAuthorized) -> LaunchInstructor {
 		switch (tutorialWasShown, isAuthorized) {
 		case (true, false), (false, false): return .auth
 		case (false, true): return .onboarding
@@ -23,7 +22,6 @@ fileprivate enum LaunchInstructor {
 
 	}
 }
-
 
 final class ApplicationCoordinator: BaseCoordinator {
 
@@ -46,7 +44,6 @@ final class ApplicationCoordinator: BaseCoordinator {
 		}
 	}
 
-
 	private func runLoginFlow() {
 		let coordinator = coordinatorFactory.makeAuthCoordinator(router: router)
 		coordinator.finishFlow = { [weak self, weak coordinator] in
@@ -57,7 +54,6 @@ final class ApplicationCoordinator: BaseCoordinator {
 		addDependency(coordinator)
 		coordinator.start()
 	}
-
 
 	private func runOnboardingFlow() {
 		let coordinator = coordinatorFactory.makeOnboardingCoordinator(router: router)
