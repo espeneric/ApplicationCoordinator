@@ -40,6 +40,14 @@
 		045336B02216DCCC001D01F7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336AF2216DCCC001D01F7 /* TabBarView.swift */; };
 		045336B22216DDF9001D01F7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336B12216DDF9001D01F7 /* TabBarController.swift */; };
 		045336B42216E10B001D01F7 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336B32216E10B001D01F7 /* TabBarCoordinator.swift */; };
+		045336B62216EC98001D01F7 /* Items.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045336B52216EC98001D01F7 /* Items.storyboard */; };
+		045336B92216EFC7001D01F7 /* ItemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336B82216EFC7001D01F7 /* ItemCoordinator.swift */; };
+		045336BB2216F0BA001D01F7 /* ItemModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336BA2216F0BA001D01F7 /* ItemModuleFactory.swift */; };
+		045336BE2216F118001D01F7 /* ItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336BD2216F118001D01F7 /* ItemCollectionView.swift */; };
+		045336C12216F17E001D01F7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336C02216F17E001D01F7 /* Item.swift */; };
+		045336C32216F21E001D01F7 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336C22216F21E001D01F7 /* ItemDetailView.swift */; };
+		045336C52216F268001D01F7 /* ItemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336C42216F268001D01F7 /* ItemDetailController.swift */; };
+		045336C72216F2FB001D01F7 /* ItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336C62216F2FB001D01F7 /* ItemCollectionViewController.swift */; };
 		04DC5DA722048A6D00644747 /* AuthCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC5DA622048A6D00644747 /* AuthCoordinatorOutput.swift */; };
 		04DC5DA922048E7300644747 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC5DA822048E7300644747 /* LoginView.swift */; };
 		04DC5DAC22048F0400644747 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC5DAB22048F0400644747 /* AuthCoordinator.swift */; };
@@ -90,6 +98,14 @@
 		045336AF2216DCCC001D01F7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		045336B12216DDF9001D01F7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		045336B32216E10B001D01F7 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		045336B52216EC98001D01F7 /* Items.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Items.storyboard; sourceTree = "<group>"; };
+		045336B82216EFC7001D01F7 /* ItemCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCoordinator.swift; sourceTree = "<group>"; };
+		045336BA2216F0BA001D01F7 /* ItemModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModuleFactory.swift; sourceTree = "<group>"; };
+		045336BD2216F118001D01F7 /* ItemCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionView.swift; sourceTree = "<group>"; };
+		045336C02216F17E001D01F7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		045336C22216F21E001D01F7 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
+		045336C42216F268001D01F7 /* ItemDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailController.swift; sourceTree = "<group>"; };
+		045336C62216F2FB001D01F7 /* ItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewController.swift; sourceTree = "<group>"; };
 		04DC5DA622048A6D00644747 /* AuthCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinatorOutput.swift; sourceTree = "<group>"; };
 		04DC5DA822048E7300644747 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		04DC5DAB22048F0400644747 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
@@ -200,6 +216,7 @@
 				0400349B2200E71000934204 /* CoordinatorFactory.swift */,
 				040034A22200F14C00934204 /* OnboardingModuleFactory.swift */,
 				04DC5DB522049EF000644747 /* AuthModuleFactory.swift */,
+				045336BA2216F0BA001D01F7 /* ItemModuleFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -260,6 +277,7 @@
 				0426866121FB92AE00FC90BF /* Main.storyboard */,
 				0426867C21FC812300FC90BF /* Onboarding.storyboard */,
 				0426867E21FC83C700FC90BF /* Auth.storyboard */,
+				045336B52216EC98001D01F7 /* Items.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -267,6 +285,7 @@
 		0426868021FC8A4600FC90BF /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				045336B72216EF82001D01F7 /* ItemsFlow */,
 				045336AE2216DC80001D01F7 /* MainTabBarFlow */,
 				04DC5DA52204888500644747 /* AuthFlow */,
 				0426868121FC8A5300FC90BF /* OnboardingFlow */,
@@ -301,11 +320,40 @@
 		045336AE2216DC80001D01F7 /* MainTabBarFlow */ = {
 			isa = PBXGroup;
 			children = (
+				045336B32216E10B001D01F7 /* TabBarCoordinator.swift */,
 				045336AF2216DCCC001D01F7 /* TabBarView.swift */,
 				045336B12216DDF9001D01F7 /* TabBarController.swift */,
-				045336B32216E10B001D01F7 /* TabBarCoordinator.swift */,
 			);
 			path = MainTabBarFlow;
+			sourceTree = "<group>";
+		};
+		045336B72216EF82001D01F7 /* ItemsFlow */ = {
+			isa = PBXGroup;
+			children = (
+				045336B82216EFC7001D01F7 /* ItemCoordinator.swift */,
+				045336BF2216F167001D01F7 /* Model */,
+				045336BC2216F0FF001D01F7 /* VC */,
+			);
+			path = ItemsFlow;
+			sourceTree = "<group>";
+		};
+		045336BC2216F0FF001D01F7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				045336BD2216F118001D01F7 /* ItemCollectionView.swift */,
+				045336C22216F21E001D01F7 /* ItemDetailView.swift */,
+				045336C42216F268001D01F7 /* ItemDetailController.swift */,
+				045336C62216F2FB001D01F7 /* ItemCollectionViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		045336BF2216F167001D01F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				045336C02216F17E001D01F7 /* Item.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		04DC5DA52204888500644747 /* AuthFlow */ = {
@@ -418,6 +466,7 @@
 				0426866821FB92B000FC90BF /* LaunchScreen.storyboard in Resources */,
 				0426866521FB92B000FC90BF /* Assets.xcassets in Resources */,
 				0426867F21FC83C700FC90BF /* Auth.storyboard in Resources */,
+				045336B62216EC98001D01F7 /* Items.storyboard in Resources */,
 				0426866321FB92AE00FC90BF /* Main.storyboard in Resources */,
 				0426867D21FC812300FC90BF /* Onboarding.storyboard in Resources */,
 			);
@@ -456,18 +505,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				040034B22202FE9300934204 /* Page1.swift in Sources */,
+				045336C32216F21E001D01F7 /* ItemDetailView.swift in Sources */,
 				0426867521FC7B8000FC90BF /* Coordinator.swift in Sources */,
+				045336C52216F268001D01F7 /* ItemDetailController.swift in Sources */,
 				04DC5DB622049EF000644747 /* AuthModuleFactory.swift in Sources */,
 				04DC5DBC2204A28300644747 /* StepsView.swift in Sources */,
+				045336C12216F17E001D01F7 /* Item.swift in Sources */,
 				040034A32200F14C00934204 /* OnboardingModuleFactory.swift in Sources */,
 				040034AC2201DC6200934204 /* PageController.swift in Sources */,
 				040034992200AC6C00934204 /* DeepLink.swift in Sources */,
+				045336BB2216F0BA001D01F7 /* ItemModuleFactory.swift in Sources */,
 				04DC5DAE22049C2400644747 /* LoginViewController.swift in Sources */,
 				040034B42202FEB100934204 /* Page2.swift in Sources */,
 				0400348A2200A11200934204 /* NSObjectExtensions.swift in Sources */,
 				045336B42216E10B001D01F7 /* TabBarCoordinator.swift in Sources */,
 				045336B02216DCCC001D01F7 /* TabBarView.swift in Sources */,
 				0426867B21FC802300FC90BF /* StoryboardsEnum.swift in Sources */,
+				045336C72216F2FB001D01F7 /* ItemCollectionViewController.swift in Sources */,
 				0426868621FC8B5200FC90BF /* BaseView.swift in Sources */,
 				040034942200A5C900934204 /* Router.swift in Sources */,
 				040034B62202FEBA00934204 /* Page3.swift in Sources */,
@@ -484,11 +538,13 @@
 				0426868821FC8B6F00FC90BF /* UIPresentable.swift in Sources */,
 				0400349F2200E89000934204 /* OnboardingCoordinatorOutput.swift in Sources */,
 				040034892200A11200934204 /* UIViewExtensions.swift in Sources */,
+				045336B92216EFC7001D01F7 /* ItemCoordinator.swift in Sources */,
 				04DC5DA922048E7300644747 /* LoginView.swift in Sources */,
 				04DC5DB022049C3400644747 /* SignUpViewController.swift in Sources */,
 				040034A52200F30500934204 /* ApplicationCoordinator.swift in Sources */,
 				0400348B2200A11200934204 /* UIViewControllerExtension.swift in Sources */,
 				045336B22216DDF9001D01F7 /* TabBarController.swift in Sources */,
+				045336BE2216F118001D01F7 /* ItemCollectionView.swift in Sources */,
 				04003484220099F100934204 /* BaseCoordinator.swift in Sources */,
 				040034A12200E8EB00934204 /* OnboardingCoordinator.swift in Sources */,
 				04DC5DBA22049FC200644747 /* TermsView.swift in Sources */,

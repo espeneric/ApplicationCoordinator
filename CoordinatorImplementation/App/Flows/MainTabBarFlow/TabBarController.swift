@@ -8,32 +8,33 @@
 
 final class TabBarController: UITabBarController, UITabBarControllerDelegate, TabBarView {
 
-	
-	var onItemFlowSelect: ((UINavigationController) -> ())?
-	var onSettingsFlowSelect: ((UINavigationController) -> ())?
-	var onViewDidLoad: ((UINavigationController) -> ())?
+	var onItemFlowSelect: ((UINavigationController) -> Void)?
+	var onSettingsFlowSelect: ((UINavigationController) -> Void)?
+	var onViewDidLoad: ((UINavigationController) -> Void)?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		delegate = self
 
-		if let vc = customizableViewControllers?.first as? UINavigationController {
-			onViewDidLoad?(vc)
+		if let controller = customizableViewControllers?.first as? UINavigationController {
+			onViewDidLoad?(controller)
 		}
 	}
 
 	func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-		guard let vc = viewControllers?[selectedIndex] as? UINavigationController else { return }
 
+		///tab bar controllers as UINavigationControllers were set up in Main.storyboard
+		guard let controller = viewControllers?[selectedIndex] as? UINavigationController else { return }
+		//wrong cast
 		switch selectedIndex {
+		case 0:
+			onItemFlowSelect?(controller)
 		case 1:
-			onItemFlowSelect?(vc)
-		case 2:
-			onSettingsFlowSelect?(vc)
+			onSettingsFlowSelect?(controller)
 		default:
 			print("Flow not implemented yet")
-			break;
+			break
 		}
 	}
 }

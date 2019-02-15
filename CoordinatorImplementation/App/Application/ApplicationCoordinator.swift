@@ -71,8 +71,6 @@ final class ApplicationCoordinator: BaseCoordinator {
 		addDependency(coordinator)
 		router.setRootModule(module, hideBar: true)
 		coordinator.start()
-		
-		print("Main Flow")
 	}
 
 }

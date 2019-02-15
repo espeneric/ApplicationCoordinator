@@ -7,7 +7,7 @@
 //
 
 final class ModuleFactoryImp:
-OnboardingModuleFactory, AuthModuleFactory {
+OnboardingModuleFactory, AuthModuleFactory, ItemModuleFactory {
 
 	//Login
 	func makeLoginModule() -> LoginView {
@@ -31,4 +31,16 @@ OnboardingModuleFactory, AuthModuleFactory {
 		return PageViewController.controllerFromStoryboard(.onboarding)
 	}
 
+	//Items
+	func makeItemOutput() -> ItemCollectionView {
+		return ItemCollectionViewController.controllerFromStoryboard(.items)
+	}
+
+	func makeItemDetailOutput(item: Item) -> ItemDetailView {
+
+		let controller = ItemDetailController.controllerFromStoryboard(.items)
+		///Dep Injection
+		controller.item = item
+		return controller
+	}
 }

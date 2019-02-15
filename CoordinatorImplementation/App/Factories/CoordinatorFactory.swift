@@ -11,8 +11,12 @@ protocol CoordinatorFactory {
 	/*
 	coordinators should be created here.
     */
+
 	func makeOnboardingCoordinator(router: Router) -> Coordinator & OnboardingCoordinatorOutput
 	func makeAuthCoordinator(router: Router) -> Coordinator & AuthCoordinatorOutput
 	func makeTabBarCoordinator() -> (configurator: Coordinator, toPresent: UIPresentable?)
+
+	func makeItemCoordinator() -> Coordinator
+	func makeItemCoordinator(navController: UINavigationController?) -> Coordinator
 
 }
