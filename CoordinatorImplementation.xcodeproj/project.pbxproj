@@ -37,6 +37,9 @@
 		0426868621FC8B5200FC90BF /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426868521FC8B5200FC90BF /* BaseView.swift */; };
 		0426868821FC8B6F00FC90BF /* UIPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426868721FC8B6F00FC90BF /* UIPresentable.swift */; };
 		0426868A21FC8D2400FC90BF /* OnBoardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426868921FC8D2400FC90BF /* OnBoardingController.swift */; };
+		045336B02216DCCC001D01F7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336AF2216DCCC001D01F7 /* TabBarView.swift */; };
+		045336B22216DDF9001D01F7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336B12216DDF9001D01F7 /* TabBarController.swift */; };
+		045336B42216E10B001D01F7 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336B32216E10B001D01F7 /* TabBarCoordinator.swift */; };
 		04DC5DA722048A6D00644747 /* AuthCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC5DA622048A6D00644747 /* AuthCoordinatorOutput.swift */; };
 		04DC5DA922048E7300644747 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC5DA822048E7300644747 /* LoginView.swift */; };
 		04DC5DAC22048F0400644747 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC5DAB22048F0400644747 /* AuthCoordinator.swift */; };
@@ -84,6 +87,9 @@
 		0426868521FC8B5200FC90BF /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		0426868721FC8B6F00FC90BF /* UIPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPresentable.swift; sourceTree = "<group>"; };
 		0426868921FC8D2400FC90BF /* OnBoardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingController.swift; sourceTree = "<group>"; };
+		045336AF2216DCCC001D01F7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		045336B12216DDF9001D01F7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		045336B32216E10B001D01F7 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		04DC5DA622048A6D00644747 /* AuthCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinatorOutput.swift; sourceTree = "<group>"; };
 		04DC5DA822048E7300644747 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		04DC5DAB22048F0400644747 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
@@ -261,6 +267,7 @@
 		0426868021FC8A4600FC90BF /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				045336AE2216DC80001D01F7 /* MainTabBarFlow */,
 				04DC5DA52204888500644747 /* AuthFlow */,
 				0426868121FC8A5300FC90BF /* OnboardingFlow */,
 			);
@@ -289,6 +296,16 @@
 				040034B52202FEBA00934204 /* Page3.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		045336AE2216DC80001D01F7 /* MainTabBarFlow */ = {
+			isa = PBXGroup;
+			children = (
+				045336AF2216DCCC001D01F7 /* TabBarView.swift */,
+				045336B12216DDF9001D01F7 /* TabBarController.swift */,
+				045336B32216E10B001D01F7 /* TabBarCoordinator.swift */,
+			);
+			path = MainTabBarFlow;
 			sourceTree = "<group>";
 		};
 		04DC5DA52204888500644747 /* AuthFlow */ = {
@@ -448,6 +465,8 @@
 				04DC5DAE22049C2400644747 /* LoginViewController.swift in Sources */,
 				040034B42202FEB100934204 /* Page2.swift in Sources */,
 				0400348A2200A11200934204 /* NSObjectExtensions.swift in Sources */,
+				045336B42216E10B001D01F7 /* TabBarCoordinator.swift in Sources */,
+				045336B02216DCCC001D01F7 /* TabBarView.swift in Sources */,
 				0426867B21FC802300FC90BF /* StoryboardsEnum.swift in Sources */,
 				0426868621FC8B5200FC90BF /* BaseView.swift in Sources */,
 				040034942200A5C900934204 /* Router.swift in Sources */,
@@ -469,6 +488,7 @@
 				04DC5DB022049C3400644747 /* SignUpViewController.swift in Sources */,
 				040034A52200F30500934204 /* ApplicationCoordinator.swift in Sources */,
 				0400348B2200A11200934204 /* UIViewControllerExtension.swift in Sources */,
+				045336B22216DDF9001D01F7 /* TabBarController.swift in Sources */,
 				04003484220099F100934204 /* BaseCoordinator.swift in Sources */,
 				040034A12200E8EB00934204 /* OnboardingCoordinator.swift in Sources */,
 				04DC5DBA22049FC200644747 /* TermsView.swift in Sources */,

@@ -72,7 +72,6 @@
                             <constraint firstItem="ghI-WK-4kB" firstAttribute="centerX" secondItem="6CH-rd-nf9" secondAttribute="centerX" id="Y7r-fH-gtf"/>
                             <constraint firstItem="ghI-WK-4kB" firstAttribute="top" secondItem="xrk-mv-pP6" secondAttribute="bottom" constant="10" id="YJY-wo-b7i"/>
                             <constraint firstItem="Gte-kd-js0" firstAttribute="height" secondItem="Aza-CH-UgD" secondAttribute="height" id="Zkn-Zs-Px8"/>
-                            <constraint firstItem="Aza-CH-UgD" firstAttribute="top" secondItem="6CH-rd-nf9" secondAttribute="top" constant="169" id="jY1-4G-Tmn"/>
                             <constraint firstItem="xrk-mv-pP6" firstAttribute="centerX" secondItem="6CH-rd-nf9" secondAttribute="centerX" id="oMw-tg-7GK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6CH-rd-nf9"/>

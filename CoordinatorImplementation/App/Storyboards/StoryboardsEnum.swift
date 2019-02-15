@@ -8,6 +8,8 @@
 
 import Foundation
 
+//case sensitive towards .storyboard files
+
 enum Storyboards: String {
 	case main = "Main"
 	case auth = "Auth"

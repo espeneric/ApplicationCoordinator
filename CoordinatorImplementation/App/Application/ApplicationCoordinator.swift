@@ -10,16 +10,15 @@ private var onboardingWasShown: Bool = false
 private var isAuthorized: Bool = false
 
 private enum LaunchInstructor {
-	case auth, onboarding
+	case auth, onboarding, main
 
 	static func configure(tutorialWasShown: Bool = onboardingWasShown,
 						  isAuthorized: Bool = isAuthorized) -> LaunchInstructor {
 		switch (tutorialWasShown, isAuthorized) {
 		case (true, false), (false, false): return .auth
 		case (false, true): return .onboarding
-		default: return .auth //should be changed to main.
+		case (true, true): return .main
 		}
-
 	}
 }
 
@@ -41,6 +40,7 @@ final class ApplicationCoordinator: BaseCoordinator {
 		switch instructor {
 		case .auth: runLoginFlow()
 		case .onboarding: runOnboardingFlow()
+		case .main: runMainFlow()
 		}
 	}
 
@@ -64,6 +64,15 @@ final class ApplicationCoordinator: BaseCoordinator {
 		}
 		addDependency(coordinator)
 		coordinator.start()
+	}
+
+	private func runMainFlow() {
+		let (coordinator, module) = coordinatorFactory.makeTabBarCoordinator()
+		addDependency(coordinator)
+		router.setRootModule(module, hideBar: true)
+		coordinator.start()
+		
+		print("Main Flow")
 	}
 
 }

@@ -16,4 +16,10 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
 		return AuthCoordinator(with: ModuleFactoryImp(), router: router)
 	}
 
+	func makeTabBarCoordinator() -> (configurator: Coordinator, toPresent: UIPresentable?) {
+		let controller = TabBarController.controllerFromStoryboard(.main)
+		let coordinator = TabBarCoordinator(tabBarView: controller, coordinatorFactory: CoordinatorFactoryImp())
+		return (coordinator, controller)
+	}
+	
 }

@@ -15,7 +15,7 @@ class BaseCoordinator: Coordinator {
 	}
 
 	//TOOD: func start() { with deeplink}
-
+	
 	///add only unique coordinator object
 	func addDependency(_ coordinator: Coordinator) {
 		guard !childCoordinator.contains(where: { $0 === coordinator }) else { return }

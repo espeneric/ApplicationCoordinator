@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fwy-SZ-VT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2601" y="487"/>
+            <point key="canvasLocation" x="3774" y="370"/>
         </scene>
         <!--Items-->
         <scene sceneID="i06-v1-NAg">
@@ -53,12 +53,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uGU-3m-FHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2601" y="-188"/>
+            <point key="canvasLocation" x="2642" y="-51"/>
+        </scene>
+        <!--Example-->
+        <scene sceneID="m6y-eG-uUv">
+            <objects>
+                <viewController id="Q65-Oy-EE8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QOM-aw-LIj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4M4-Uq-FPV"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Example" id="nTX-03-29X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2F-P3-OJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2642" y="887"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mKW-Ou-Cbb">
             <objects>
-                <tabBarController id="sYz-ic-aVJ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="sYz-ic-aVJ" customClass="TabBarController" customModule="CoordinatorImplementation" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FTL-7o-fzP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -67,11 +83,12 @@
                     <connections>
                         <segue destination="bAQ-4o-1pE" kind="relationship" relationship="viewControllers" id="D1B-Yu-Fzn"/>
                         <segue destination="SAE-Ht-DpQ" kind="relationship" relationship="viewControllers" id="vXC-PD-0GU"/>
+                        <segue destination="Q65-Oy-EE8" kind="relationship" relationship="viewControllers" id="mUa-i0-p22"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpU-8A-har" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="148"/>
+            <point key="canvasLocation" x="1376" y="370"/>
         </scene>
     </scenes>
 </document>
