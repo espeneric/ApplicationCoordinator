@@ -10,7 +10,8 @@ final class ModuleFactoryImp:
 OnboardingModuleFactory,
 AuthModuleFactory,
 ItemModuleFactory,
-CreateItemModuleFactory {
+CreateItemModuleFactory,
+SettingsModuleFactory {
 
 	//Login
 	func makeLoginModule() -> LoginView {
@@ -35,11 +36,11 @@ CreateItemModuleFactory {
 	}
 
 	//Items view
-	func makeItemOutput() -> ItemCollectionView {
+	func makeItemModule() -> ItemCollectionView {
 		return ItemCollectionViewController.controllerFromStoryboard(.items)
 	}
 
-	func makeItemDetailOutput(item: Item) -> ItemDetailView {
+	func makeItemDetailModule(item: Item) -> ItemDetailView {
 
 		let controller = ItemDetailController.controllerFromStoryboard(.items)
 		///Dep Injection
@@ -50,6 +51,11 @@ CreateItemModuleFactory {
 	//Create item view
 	func makeItemCreateModule() -> CreateItemView {
 		return CreateItemController.controllerFromStoryboard(.createItem)
+	}
+
+	//Create settings
+	func makeSettingsModule() -> SettingsView {
+		return SettingsViewController.controllerFromStoryboard(.settings)
 	}
 
 }

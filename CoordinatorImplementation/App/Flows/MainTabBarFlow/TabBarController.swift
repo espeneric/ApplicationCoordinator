@@ -30,10 +30,11 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate, Ta
 		case 0:
 			onItemFlowSelect?(controller)
 		case 1:
+			print("Search not implemented yet")
+		case 2:
 			onSettingsFlowSelect?(controller)
 		default:
 			print("Flow not implemented yet")
-			break
 		}
 	}
 }

@@ -27,4 +27,7 @@ protocol CoordinatorFactory {
 		(configurator: Coordinator & CreateItemCoordinatorOutput,
 		toPresent: UIPresentable?)
 
+	func makeSettingsCoordinator() -> Coordinator
+	func makeSettingsCoordinator(navController: UINavigationController?) -> Coordinator
+
 }

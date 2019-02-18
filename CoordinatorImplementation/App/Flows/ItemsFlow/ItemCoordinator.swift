@@ -19,12 +19,11 @@ final class ItemCoordinator: BaseCoordinator {
 	}
 
 	override func start() {
-		print("Items started")
 		showItemList()
 	}
 
 	private func showItemList() {
-		let itemsOutput = factory.makeItemOutput()
+		let itemsOutput = factory.makeItemModule()
 
 		itemsOutput.onItemSelect = { [weak self] (item) in
 			self?.showItemDetail(item)
@@ -38,7 +37,7 @@ final class ItemCoordinator: BaseCoordinator {
 
 	//DI
 	private func showItemDetail(_ item: Item) {
-		let itemDetail = factory.makeItemDetailOutput(item: item)
+		let itemDetail = factory.makeItemDetailModule(item: item)
 		router.push(itemDetail, hideBottomBar: true)
 	}
 

@@ -17,10 +17,9 @@ class TabBarCoordinator: BaseCoordinator {
 	}
 
 	override func start() {
-		print("Item started")
 		tabBarView.onViewDidLoad = runItemFlow()
 		tabBarView.onItemFlowSelect = runItemFlow()
-		//		tabBarView.onSettingsFlowSelect = runSettingsFlow()
+		tabBarView.onSettingsFlowSelect = runSettingsFlow()
 	}
 
 	private func runItemFlow() -> ((UINavigationController) -> Void) {
@@ -33,15 +32,13 @@ class TabBarCoordinator: BaseCoordinator {
 		}
 	}
 
-	//TODO:
-
-//	private func runSettingsFlow() -> ((UINavigationController) -> ()) {
-//		return { [unowned self] navController in
-//			if navController.viewControllers.isEmpty {
-//				//make settings coordinator
-//				//add dependency
-//				//start coordinator
-//			}
-//		}
-//	}
+	private func runSettingsFlow() -> ((UINavigationController) -> Void) {
+		return { [unowned self] navController in
+			if navController.viewControllers.isEmpty {
+				let settingCoordinator = self.coordinatorFactory.makeSettingsCoordinator(navController: navController)
+				self.addDependency(settingCoordinator)
+				settingCoordinator.start()
+			}
+		}
+	}
 }

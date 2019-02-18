@@ -37,6 +37,11 @@
 		0426868621FC8B5200FC90BF /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426868521FC8B5200FC90BF /* BaseView.swift */; };
 		0426868821FC8B6F00FC90BF /* UIPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426868721FC8B6F00FC90BF /* UIPresentable.swift */; };
 		0426868A21FC8D2400FC90BF /* OnBoardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426868921FC8D2400FC90BF /* OnBoardingController.swift */; };
+		0427B498221AF7610007C8B6 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0427B497221AF7610007C8B6 /* Settings.storyboard */; };
+		0427B49B221AFB160007C8B6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427B49A221AFB160007C8B6 /* SettingsView.swift */; };
+		0427B49E221AFB820007C8B6 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427B49D221AFB820007C8B6 /* SettingsCoordinator.swift */; };
+		0427B4A0221AFD4E0007C8B6 /* SettingsModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427B49F221AFD4E0007C8B6 /* SettingsModuleFactory.swift */; };
+		0427B4A2221AFEF90007C8B6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427B4A1221AFEF90007C8B6 /* SettingsViewController.swift */; };
 		045336B02216DCCC001D01F7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336AF2216DCCC001D01F7 /* TabBarView.swift */; };
 		045336B22216DDF9001D01F7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336B12216DDF9001D01F7 /* TabBarController.swift */; };
 		045336B42216E10B001D01F7 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045336B32216E10B001D01F7 /* TabBarCoordinator.swift */; };
@@ -101,6 +106,11 @@
 		0426868521FC8B5200FC90BF /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		0426868721FC8B6F00FC90BF /* UIPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPresentable.swift; sourceTree = "<group>"; };
 		0426868921FC8D2400FC90BF /* OnBoardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingController.swift; sourceTree = "<group>"; };
+		0427B497221AF7610007C8B6 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		0427B49A221AFB160007C8B6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0427B49D221AFB820007C8B6 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		0427B49F221AFD4E0007C8B6 /* SettingsModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModuleFactory.swift; sourceTree = "<group>"; };
+		0427B4A1221AFEF90007C8B6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		045336AF2216DCCC001D01F7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		045336B12216DDF9001D01F7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		045336B32216E10B001D01F7 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -230,6 +240,7 @@
 				04DC5DB522049EF000644747 /* AuthModuleFactory.swift */,
 				045336BA2216F0BA001D01F7 /* ItemModuleFactory.swift */,
 				045336D0221AB0DB001D01F7 /* CreateItemModuleFactory.swift */,
+				0427B49F221AFD4E0007C8B6 /* SettingsModuleFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -292,6 +303,7 @@
 				0426867E21FC83C700FC90BF /* Auth.storyboard */,
 				045336B52216EC98001D01F7 /* Items.storyboard */,
 				045336C8221AAF1A001D01F7 /* CreateItem.storyboard */,
+				0427B497221AF7610007C8B6 /* Settings.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -299,11 +311,12 @@
 		0426868021FC8A4600FC90BF /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				045336B72216EF82001D01F7 /* ItemsFlow */,
-				045336CA221AAFF3001D01F7 /* CreateItemFlow */,
-				045336AE2216DC80001D01F7 /* MainTabBarFlow */,
 				04DC5DA52204888500644747 /* AuthFlow */,
+				045336CA221AAFF3001D01F7 /* CreateItemFlow */,
+				045336B72216EF82001D01F7 /* ItemsFlow */,
+				045336AE2216DC80001D01F7 /* MainTabBarFlow */,
 				0426868121FC8A5300FC90BF /* OnboardingFlow */,
+				0427B499221AFA6F0007C8B6 /* SettingsFlow */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -328,6 +341,24 @@
 				040034B12202FE9300934204 /* Page1.swift */,
 				040034B32202FEB100934204 /* Page2.swift */,
 				040034B52202FEBA00934204 /* Page3.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		0427B499221AFA6F0007C8B6 /* SettingsFlow */ = {
+			isa = PBXGroup;
+			children = (
+				0427B49D221AFB820007C8B6 /* SettingsCoordinator.swift */,
+				0427B49C221AFB720007C8B6 /* VC */,
+			);
+			path = SettingsFlow;
+			sourceTree = "<group>";
+		};
+		0427B49C221AFB720007C8B6 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				0427B49A221AFB160007C8B6 /* SettingsView.swift */,
+				0427B4A1221AFEF90007C8B6 /* SettingsViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -500,6 +531,7 @@
 				0426866821FB92B000FC90BF /* LaunchScreen.storyboard in Resources */,
 				0426866521FB92B000FC90BF /* Assets.xcassets in Resources */,
 				0426867F21FC83C700FC90BF /* Auth.storyboard in Resources */,
+				0427B498221AF7610007C8B6 /* Settings.storyboard in Resources */,
 				045336C9221AAF1A001D01F7 /* CreateItem.storyboard in Resources */,
 				045336B62216EC98001D01F7 /* Items.storyboard in Resources */,
 				0426866321FB92AE00FC90BF /* Main.storyboard in Resources */,
@@ -578,7 +610,9 @@
 				0426868821FC8B6F00FC90BF /* UIPresentable.swift in Sources */,
 				0400349F2200E89000934204 /* OnboardingCoordinatorOutput.swift in Sources */,
 				040034892200A11200934204 /* UIViewExtensions.swift in Sources */,
+				0427B49B221AFB160007C8B6 /* SettingsView.swift in Sources */,
 				045336B92216EFC7001D01F7 /* ItemCoordinator.swift in Sources */,
+				0427B49E221AFB820007C8B6 /* SettingsCoordinator.swift in Sources */,
 				04DC5DA922048E7300644747 /* LoginView.swift in Sources */,
 				04DC5DB022049C3400644747 /* SignUpViewController.swift in Sources */,
 				040034A52200F30500934204 /* ApplicationCoordinator.swift in Sources */,
@@ -589,6 +623,8 @@
 				040034A12200E8EB00934204 /* OnboardingCoordinator.swift in Sources */,
 				04DC5DBA22049FC200644747 /* TermsView.swift in Sources */,
 				04DC5DA722048A6D00644747 /* AuthCoordinatorOutput.swift in Sources */,
+				0427B4A0221AFD4E0007C8B6 /* SettingsModuleFactory.swift in Sources */,
+				0427B4A2221AFEF90007C8B6 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,7 +21,8 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
 	///main tabBar
 	func makeTabBarCoordinator() -> (configurator: Coordinator, toPresent: UIPresentable?) {
 		let controller = TabBarController.controllerFromStoryboard(.main)
-		let coordinator = TabBarCoordinator(tabBarView: controller, coordinatorFactory: CoordinatorFactoryImp())
+		let coordinator = TabBarCoordinator(tabBarView: controller,
+											coordinatorFactory: CoordinatorFactoryImp())
 		return (coordinator, controller)
 	}
 
@@ -51,13 +52,25 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
 	func makeItemCreationCoordinatorBox(navController: UINavigationController?) ->
 		(configurator: Coordinator & CreateItemCoordinatorOutput, toPresent: UIPresentable?) {
 			let router = self.router(navController)
-			let coordinator = CreateItemCoordinator(factory: ModuleFactoryImp(), router: router)
+			let coordinator = CreateItemCoordinator(factory: ModuleFactoryImp(),
+													router: router)
 			return (coordinator, router)
 	}
 
 	func makeItemCreationCoordinatorBox() ->
 		(configurator: Coordinator & CreateItemCoordinatorOutput, toPresent: UIPresentable?) {
 			return makeItemCreationCoordinatorBox(navController: navigationController(nil))
+	}
+
+	///create settings
+	func makeSettingsCoordinator() -> Coordinator {
+		return makeSettingsCoordinator(navController: nil)
+	}
+
+	func makeSettingsCoordinator(navController: UINavigationController? = nil) -> Coordinator {
+		let coordinator = SettingsCoordinator(router: router(navController),
+											  factory: ModuleFactoryImp())
+		return coordinator
 	}
 
 }

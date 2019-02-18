@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="99" y="370"/>
         </scene>
-        <!--Settings-->
+        <!--Navigation Controller-->
         <scene sceneID="7RF-fs-Cyf">
             <objects>
                 <viewController id="SAE-Ht-DpQ" customClass="UINavigationController" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LCq-oa-ti0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="U84-ba-pMK"/>
+                    <tabBarItem key="tabBarItem" title="" systemItem="search" id="U84-ba-pMK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fwy-SZ-VT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,7 +55,7 @@
             </objects>
             <point key="canvasLocation" x="2642" y="-51"/>
         </scene>
-        <!--Example-->
+        <!--Settings-->
         <scene sceneID="m6y-eG-uUv">
             <objects>
                 <viewController id="Q65-Oy-EE8" customClass="UINavigationController" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4M4-Uq-FPV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Example" id="nTX-03-29X"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="nTX-03-29X"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2F-P3-OJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
