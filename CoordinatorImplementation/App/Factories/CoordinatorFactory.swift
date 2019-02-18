@@ -19,4 +19,12 @@ protocol CoordinatorFactory {
 	func makeItemCoordinator() -> Coordinator
 	func makeItemCoordinator(navController: UINavigationController?) -> Coordinator
 
+	func makeItemCreationCoordinatorBox() ->
+		(configurator: Coordinator & CreateItemCoordinatorOutput,
+		toPresent: UIPresentable?)
+
+	func makeItemCreationCoordinatorBox(navController: UINavigationController?) ->
+		(configurator: Coordinator & CreateItemCoordinatorOutput,
+		toPresent: UIPresentable?)
+
 }

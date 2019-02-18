@@ -20,6 +20,9 @@ final class ItemCollectionViewController: UIViewController, ItemCollectionView {
 
 		title = "Items"
 
+		collectionView.dataSource = self
+		collectionView.delegate = self
+
 		navigationItem.rightBarButtonItem = UIBarButtonItem(
 			barButtonSystemItem: .add,
 			target: self,
@@ -28,7 +31,7 @@ final class ItemCollectionViewController: UIViewController, ItemCollectionView {
 	}
 
 	//mock data
-	var items = (0...5).map { index in return Item(image: nil, name: "Item: \(index)")}
+	var items = (0...15).map { index in return Item(image: nil, name: "Item: \(index)")}
 }
 
 extension ItemCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -44,7 +47,7 @@ extension ItemCollectionViewController: UICollectionViewDelegate, UICollectionVi
 	//TODO: Add data.
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath)
-		let item = items[indexPath.row]
+		//let item = items[indexPath.row]
 		cell.backgroundColor = UIColor.gray
 		return cell
 	}

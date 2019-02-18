@@ -15,6 +15,6 @@ enum Storyboards: String {
 	case auth = "Auth"
 	case onboarding = "Onboarding"
 	case items = "Items"
-	case create = "Create"
+	case createItem = "CreateItem"
 	case settings = "Settings"
 }

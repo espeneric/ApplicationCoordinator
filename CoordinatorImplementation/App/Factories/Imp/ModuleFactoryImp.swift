@@ -7,7 +7,10 @@
 //
 
 final class ModuleFactoryImp:
-OnboardingModuleFactory, AuthModuleFactory, ItemModuleFactory {
+OnboardingModuleFactory,
+AuthModuleFactory,
+ItemModuleFactory,
+CreateItemModuleFactory {
 
 	//Login
 	func makeLoginModule() -> LoginView {
@@ -31,7 +34,7 @@ OnboardingModuleFactory, AuthModuleFactory, ItemModuleFactory {
 		return PageViewController.controllerFromStoryboard(.onboarding)
 	}
 
-	//Items
+	//Items view
 	func makeItemOutput() -> ItemCollectionView {
 		return ItemCollectionViewController.controllerFromStoryboard(.items)
 	}
@@ -43,4 +46,10 @@ OnboardingModuleFactory, AuthModuleFactory, ItemModuleFactory {
 		controller.item = item
 		return controller
 	}
+
+	//Create item view
+	func makeItemCreateModule() -> CreateItemView {
+		return CreateItemController.controllerFromStoryboard(.createItem)
+	}
+
 }

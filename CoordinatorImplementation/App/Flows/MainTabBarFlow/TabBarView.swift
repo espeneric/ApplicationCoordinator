@@ -6,7 +6,7 @@
 //  Copyright © 2019 Andrian Sergheev. All rights reserved.
 //
 
-protocol TabBarView: class {
+protocol TabBarView: BaseView {
 	var onItemFlowSelect: ((UINavigationController) -> Void)? { get set }
 	var onSettingsFlowSelect: ((UINavigationController) -> Void)? { get set }
 	var onViewDidLoad: ((UINavigationController) -> Void)? { get set }

@@ -33,6 +33,8 @@ class TabBarCoordinator: BaseCoordinator {
 		}
 	}
 
+	//TODO:
+
 //	private func runSettingsFlow() -> ((UINavigationController) -> ()) {
 //		return { [unowned self] navController in
 //			if navController.viewControllers.isEmpty {

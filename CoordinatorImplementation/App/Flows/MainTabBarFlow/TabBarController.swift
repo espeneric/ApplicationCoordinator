@@ -26,7 +26,6 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate, Ta
 
 		///tab bar controllers as UINavigationControllers were set up in Main.storyboard
 		guard let controller = viewControllers?[selectedIndex] as? UINavigationController else { return }
-		//wrong cast
 		switch selectedIndex {
 		case 0:
 			onItemFlowSelect?(controller)
