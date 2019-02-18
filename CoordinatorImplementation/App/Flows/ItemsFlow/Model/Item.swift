@@ -9,4 +9,9 @@
 struct Item {
 	let image: UIImage?
 	let name: String
+
+	init(image: UIImage?, name: String) {
+		self.image = image
+		self.name = name
+	}
 }

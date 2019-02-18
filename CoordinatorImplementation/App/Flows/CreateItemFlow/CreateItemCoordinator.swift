@@ -19,7 +19,18 @@ final class CreateItemCoordinator: BaseCoordinator, CreateItemCoordinatorOutput 
 	}
 
 	override func start() {
-		print("Create Items started.")
+		showCreate()
+	}
+
+	private func showCreate() {
+		let createItem = factory.makeItemCreateModule()
+		createItem.onCompleteCreateItem = { [weak self] item in
+			self?.finishFlow?(item)
+		}
+		createItem.onHideButtonTap = { [weak self ] in
+			self?.finishFlow?(nil)
+		}
+		router.setRootModule(createItem)
 	}
 
 }
