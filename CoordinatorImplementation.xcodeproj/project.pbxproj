@@ -311,6 +311,7 @@
 		0426868021FC8A4600FC90BF /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				0427B4A3221B0B390007C8B6 /* SearchFlow */,
 				04DC5DA52204888500644747 /* AuthFlow */,
 				045336CA221AAFF3001D01F7 /* CreateItemFlow */,
 				045336B72216EF82001D01F7 /* ItemsFlow */,
@@ -361,6 +362,13 @@
 				0427B4A1221AFEF90007C8B6 /* SettingsViewController.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		0427B4A3221B0B390007C8B6 /* SearchFlow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchFlow;
 			sourceTree = "<group>";
 		};
 		045336AE2216DC80001D01F7 /* MainTabBarFlow */ = {
