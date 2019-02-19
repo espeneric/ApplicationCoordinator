@@ -11,10 +11,10 @@ class BaseCoordinator: Coordinator {
 	var childCoordinator: [Coordinator] = []
 
 	func start() {
-		//start(with: nil)
+		start(with: nil)
 	}
 
-	//TOOD: func start() { with deeplink}
+	func start(with option: DeepLink?) { }
 
 	///add only unique coordinator object
 	func addDependency(_ coordinator: Coordinator) {

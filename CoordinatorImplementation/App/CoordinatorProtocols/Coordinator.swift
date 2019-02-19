@@ -8,7 +8,7 @@
 
 protocol Coordinator: class {
 	func start()
-	//func start(with option: nil) //add deeplinking option
+	func start(with option: DeepLink?) //add deeplinking option
 }
 
 /*

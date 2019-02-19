@@ -69,6 +69,9 @@
 		04DC5DB822049FB900644747 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC5DB722049FB900644747 /* SignUpView.swift */; };
 		04DC5DBA22049FC200644747 /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC5DB922049FC200644747 /* TermsView.swift */; };
 		04DC5DBC2204A28300644747 /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC5DBB2204A28300644747 /* StepsView.swift */; };
+		04EF6B08221BFB6A009FF6FD /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF6B07221BFB6A009FF6FD /* Atomic.swift */; };
+		04EF6B0A221BFCF2009FF6FD /* Bundle-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF6B09221BFCF2009FF6FD /* Bundle-Extensions.swift */; };
+		04EF6B0D221BFD5B009FF6FD /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF6B0C221BFD5B009FF6FD /* AsyncOperation.swift */; };
 		DD160CBA48DCADEC5374CF88 /* Pods_CoordinatorImplementation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 080492F89FEFD0AFA6A9A06C /* Pods_CoordinatorImplementation.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +141,9 @@
 		04DC5DB722049FB900644747 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		04DC5DB922049FC200644747 /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
 		04DC5DBB2204A28300644747 /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
+		04EF6B07221BFB6A009FF6FD /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
+		04EF6B09221BFCF2009FF6FD /* Bundle-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Extensions.swift"; sourceTree = "<group>"; };
+		04EF6B0C221BFD5B009FF6FD /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		080492F89FEFD0AFA6A9A06C /* Pods_CoordinatorImplementation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoordinatorImplementation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7AEEE6E524E777C42306AA /* Pods-CoordinatorImplementation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorImplementation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorImplementation/Pods-CoordinatorImplementation.debug.xcconfig"; sourceTree = "<group>"; };
 		692D7E2EC8FADBD7B46A236A /* Pods-CoordinatorImplementation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorImplementation.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorImplementation/Pods-CoordinatorImplementation.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 		040034852200A10200934204 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				04EF6B05221BFA5A009FF6FD /* RadiantExtensions */,
 				040034882200A11100934204 /* UIViewControllerExtension.swift */,
 				040034862200A11100934204 /* UIViewExtensions.swift */,
 				040034872200A11100934204 /* NSObjectExtensions.swift */,
@@ -460,6 +467,32 @@
 			path = VM;
 			sourceTree = "<group>";
 		};
+		04EF6B05221BFA5A009FF6FD /* RadiantExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				04EF6B0B221BFD42009FF6FD /* Operation */,
+				04EF6B06221BFB53009FF6FD /* Atomic */,
+				04EF6B09221BFCF2009FF6FD /* Bundle-Extensions.swift */,
+			);
+			path = RadiantExtensions;
+			sourceTree = "<group>";
+		};
+		04EF6B06221BFB53009FF6FD /* Atomic */ = {
+			isa = PBXGroup;
+			children = (
+				04EF6B07221BFB6A009FF6FD /* Atomic.swift */,
+			);
+			path = Atomic;
+			sourceTree = "<group>";
+		};
+		04EF6B0B221BFD42009FF6FD /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				04EF6B0C221BFD5B009FF6FD /* AsyncOperation.swift */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
 		7D6A1E9D10E7316126209FBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +621,7 @@
 				04DC5DBC2204A28300644747 /* StepsView.swift in Sources */,
 				045336C12216F17E001D01F7 /* Item.swift in Sources */,
 				040034A32200F14C00934204 /* OnboardingModuleFactory.swift in Sources */,
+				04EF6B0A221BFCF2009FF6FD /* Bundle-Extensions.swift in Sources */,
 				040034AC2201DC6200934204 /* PageController.swift in Sources */,
 				045336D1221AB0DB001D01F7 /* CreateItemModuleFactory.swift in Sources */,
 				045336CE221AB063001D01F7 /* CreateItemCoordinator.swift in Sources */,
@@ -600,6 +634,7 @@
 				045336D5221AB17F001D01F7 /* CreateItemController.swift in Sources */,
 				045336B42216E10B001D01F7 /* TabBarCoordinator.swift in Sources */,
 				045336B02216DCCC001D01F7 /* TabBarView.swift in Sources */,
+				04EF6B0D221BFD5B009FF6FD /* AsyncOperation.swift in Sources */,
 				0426867B21FC802300FC90BF /* StoryboardsEnum.swift in Sources */,
 				045336C72216F2FB001D01F7 /* ItemCollectionViewController.swift in Sources */,
 				0426868621FC8B5200FC90BF /* BaseView.swift in Sources */,
@@ -633,6 +668,7 @@
 				04DC5DA722048A6D00644747 /* AuthCoordinatorOutput.swift in Sources */,
 				0427B4A0221AFD4E0007C8B6 /* SettingsModuleFactory.swift in Sources */,
 				0427B4A2221AFEF90007C8B6 /* SettingsViewController.swift in Sources */,
+				04EF6B08221BFB6A009FF6FD /* Atomic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

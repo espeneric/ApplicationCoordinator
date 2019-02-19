@@ -14,7 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	private lazy var applicationCoordinator: Coordinator = self.makeCoordinator()
 
 	var rootController: UINavigationController {
-		return self.window?.rootViewController as! UINavigationController
+		guard let navController = self.window?.rootViewController as? UINavigationController else { fatalError("can't instantiate nav controller")}
+		return navController
 	}
 
 	private func makeCoordinator() -> Coordinator {
